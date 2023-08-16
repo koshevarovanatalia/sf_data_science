@@ -5,3 +5,4 @@ From the [Skillfactory Data Science cource]
 
 *[Проект 0. Игра: угадай число]()
 *[Проект 1. И]()
+*[Проект 1. И]()
