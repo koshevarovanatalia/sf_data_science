@@ -47,7 +47,7 @@ def game_core_v3(number: int = 1) -> int:
         elif number > predict:
             int_min = predict + 1
             predict = (int_max + int_min) // 2    
-                    
+              
     return count
     # Ваш код заканчивается здесь
 
@@ -56,3 +56,4 @@ if __name__ == "__main__":
     # RUN
     print('Run benchmarking for game_core_v3: ', end='')
     score_game(game_core_v3)
+
