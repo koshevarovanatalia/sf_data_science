@@ -29,12 +29,11 @@ def game_core_v3(number: int = 1) -> int:
     Returns:
         int: Число попыток
     """
-    # Ваш код начинается здесь
+    # Инициализируем переменные
     count = 0 # инициализируем число попыток
-    predict = np.random.randint(1, 101) # угадываем число
-    
     interval_min = 1 # инициализируем начало интервала
     interval_max = 100 # инициализируем конец интервала
+    predict = np.random.randint(1, 101) # угадываем число
     
     # пока не угадали
     while number != predict:
@@ -49,7 +48,6 @@ def game_core_v3(number: int = 1) -> int:
         elif number > predict:
             interval_min = predict + 1 # начало интервала - следующее после предсказанного
             predict = (interval_max + interval_min) // 2 # предсказанное - середина интервала
-
     return count
     # Ваш код заканчивается здесь
 
