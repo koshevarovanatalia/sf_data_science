@@ -9,14 +9,15 @@ def score_game(random_predict) -> int:
     Returns:
         int: среднее количество попыток
     """
-    count_ls = []
+    count_ls = [] # создаем пустой списк для записи количества попыток
     #np.random.seed(1)  # фиксируем сид для воспроизводимости
     random_array = np.random.randint(1, 101, size=(10000))  # загадали список чисел
 
+    # заполняем список количеством попыток для угадывания
     for number in random_array:
         count_ls.append(random_predict(number))
 
-    score = int(np.mean(count_ls))
+    score = int(np.mean(count_ls)) # считаем среднее значение
     print(f"Ваш алгоритм угадывает число в среднем за: {score} попытки")
     
 
@@ -29,25 +30,26 @@ def game_core_v3(number: int = 1) -> int:
         int: Число попыток
     """
     # Ваш код начинается здесь
-    count = 0
-    predict = np.random.randint(1, 101)
+    count = 0 # инициализируем число попыток
+    predict = np.random.randint(1, 101) # угадываем число
     
-    int_min = 1
-    int_max = 100
+    interval_min = 1 # инициализируем начало интервала
+    interval_max = 100 # инициализируем конец интервала
     
+    # пока не угадали
     while number != predict:
-        count += 1
+        count += 1 # инкрементируем счетчик попыток
 
-
+        # если загаданное меньше предсказанного
         if number < predict:
-            int_min = 1
-            int_max = predict 
-            predict = (int_max - int_min) // 2
-            
+            interval_max = predict # конец интервала - предсказанное число
+            predict = (interval_max - interval_min) // 2 # предсказанное - середина
+         
+        # если загаданное больше предсказанного   
         elif number > predict:
-            int_min = predict + 1
-            predict = (int_max + int_min) // 2    
-              
+            interval_min = predict + 1 # начало интервала - следующее после предсказанного
+            predict = (interval_max + interval_min) // 2 # предсказанное - середина интервала
+
     return count
     # Ваш код заканчивается здесь
 
@@ -56,4 +58,5 @@ if __name__ == "__main__":
     # RUN
     print('Run benchmarking for game_core_v3: ', end='')
     score_game(game_core_v3)
+
 
