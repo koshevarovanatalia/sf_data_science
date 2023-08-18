@@ -1,17 +1,17 @@
 # Проект 0. Угадай число
 
 ## Оглавление  
-[1. Описание проекта](.README.md#Описание-проекта)  
-[2. Какой кейс решаем?](.README.md#Какой-кейс-решаем)  
-[3. Краткая информация о данных](.README.md#Краткая-информация-о-данных)  
-[4. Этапы работы над проектом](.README.md#Этапы-работы-над-проектом)  
-[5. Результат](.README.md#Результат)    
-[6. Выводы](.README.md#Выводы) 
+[1. Описание проекта](https://github.com/koshevarovanatalia/sf_data_science/blob/main/project_0/README.md#Описание-проекта)  
+[2. Какой кейс решаем?](https://github.com/koshevarovanatalia/sf_data_science/blob/main/project_0/README.md#Какой-кейс-решаем)  
+[3. Краткая информация о данных](https://github.com/koshevarovanatalia/sf_data_science/blob/main/project_0/README.md#Краткая-информация-о-данных)  
+[4. Этапы работы над проектом](https://github.com/koshevarovanatalia/sf_data_science/blob/main/project_0/README.md#Этапы-работы-над-проектом)  
+[5. Результат](https://github.com/koshevarovanatalia/sf_data_science/blob/main/project_0/README.md#Результат)    
+[6. Выводы](https://github.com/koshevarovanatalia/sf_data_science/blob/main/project_0/README.md#Выводы) 
 
 ### Описание проекта    
 Угадать загаданное компьютером число за минимальное число попыток.
 
-:arrow_up:[к оглавлению](https://github.com/koshevarovanatalia/sf_data_science/tree/main/project%200#%D0%BE%D0%B3%D0%BB%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5)
+:arrow_up:[к оглавлению](https://github.com/koshevarovanatalia/sf_data_science/blob/main/project_0/README.md#Оглавление)
 
 
 ### Какой кейс решаем?    
@@ -29,27 +29,36 @@
 
 
 ### Краткая информация о данных
-....
-  
+На вход функции game_core_v3 подается загаданное число (int).
+Функция game_core_v3 возвращает количество попыток, за которое компьютер угадал это число.
+Функция score_game на вход получает функцию для угадывания чисел.
+Функция score_game возвращает среднее количество попыток, за которые компьютер угадал загаданное число.
+
 :arrow_up:[к оглавлению](https://github.com/koshevarovanatalia/sf_data_science/blob/main/project_0/README.md#Оглавление)
 
 
 ### Этапы работы над проектом  
-....
+1 Этап. Написание функции для подсчета количества попыток, за которые компьютер угадывает число.
+Для выполнения условия связанного с обеспечением минимального количества попыток для угадывания, был использован аналог бинарного поиска. 
+Сравниваем угаданное и загаданное числа, и, в зависимости от результата сравнения, сокращаем интервал поиска в 2 раза.
+В цикле подсчитываем количество попыток, за которые компьютер угадал число.
+Функция возвращает количество попыток.
+2 Этап. Написание функции для вычисления среднего количества попыток для угадывания числа в выборке из 1000 загаданных чисел.
 
-:arrow_up:[к оглавлению](.README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/koshevarovanatalia/sf_data_science/blob/main/project_0/README.md#Оглавление)
 
 
 ### Результаты:  
-....
+В результате получилось среднее количество попыток, за которые компьютер угадывает число, равное 9.
+количество повторений, на которых был получен результат равно 1000.
 
-:arrow_up:[к оглавлению](.README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/koshevarovanatalia/sf_data_science/blob/main/project_0/README.md#Оглавление)
 
 
 ### Выводы:  
-....
+С учетом полученных результатов считаю, что задача выполнена корректно.
 
-:arrow_up:[к оглавлению](.README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/koshevarovanatalia/sf_data_science/blob/main/project_0/README.md#Оглавление)
 
 
 Если информация по этому проекту покажется вам интересной или полезной, то я буду очень вам благодарен, если отметите репозиторий и профиль ⭐️⭐️⭐️-дами
