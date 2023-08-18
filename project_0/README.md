@@ -31,7 +31,7 @@
 ### Краткая информация о данных
 ....
   
-:arrow_up:[к оглавлению](.README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/koshevarovanatalia/sf_data_science/tree/main/project%200.README.md#Оглавление)
 
 
 ### Этапы работы над проектом  
